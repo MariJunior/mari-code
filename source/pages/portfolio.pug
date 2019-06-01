@@ -1,0 +1,24 @@
+extends ../pug/layout.pug
+include ../pug/mixins/header.pug
+include ../pug/mixins/footer.pug
+include ../pug/data/pages-list.pug
+
+block header
+  +header(pagesList, 4)
+
+block content
+  section.portfolio
+    h1.portfolio__title.page-title Мои работы
+
+    ul.portolio__categories
+      li.portfolio__category
+        a(href='#') Фиксированная вёрстка
+      li.portfolio__category
+        a(href='#') Резиновая вёрстка
+      li.portfolio__category
+        a(href='#') Адаптивная вёрстка
+      li.portfolio__category
+        a(href='#') JavaScript программирование
+
+block footer
+  +footer()

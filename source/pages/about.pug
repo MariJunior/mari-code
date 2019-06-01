@@ -1,0 +1,41 @@
+extends ../pug/layout.pug
+include ../pug/mixins/header.pug
+include ../pug/mixins/footer.pug
+include ../pug/data/pages-list.pug
+
+block header
+  +header(pagesList, 2)
+
+block content
+  section.about.page-wrapper
+    .about__my-photo-wrap
+      img.about__my-photo(src='img/photo-third.jpg', with='467', height='310', alt='Моя фотография')
+    .about__data
+      h1.about__data-title.page-title Обо мне
+      p.about__data-text
+        | Привет! Я Марина Калюжная. Моя специализация — frontend–разработка. Верстаю сайты и пишу логику для них.
+      p.about__data-text
+        | Вёрсткой начала интересоваться 2 года назад, когда проходила соответсвующий предмет в университете. С тех пор успела закончить 3 интенсива и успешно защитить выпускные проекты в „HTML Academy“. Также прошла стажировку во frontend-аутсорсе „Лига А.“.
+      p.about__data-text
+        | Сейчас стараюсь развиваться профессионально и социально. В свободное время посещаю митапы pitercss_meetup, Web Standart Days, несколько раз была ментором и фотографом на pitercss_class. В интернете слежу за популярными специалистами, такими как Макеевым Вадимом (pepelsbey), Юлией Бухваловой (yoksel), Николаем Громовым (nicothin). Слушаю подкасты и слежу за публикациями „Веб-стандартов“.
+      h2.about__data-subtitle Мои интересы
+      ul.about__data-hobby
+        li.about__data-hobby-item.about__data-hobby-item--green
+          span.about__data-hobby-item-text Дизайн
+        li.about__data-hobby-item.about__data-hobby-item--blue
+          span.about__data-hobby-item-text Типографика
+        li.about__data-hobby-item.about__data-hobby-item--green
+          span.about__data-hobby-item-text Литература
+        li.about__data-hobby-item.about__data-hobby-item--blue
+          span.about__data-hobby-item-text Музыка
+        li.about__data-hobby-item.about__data-hobby-item--green
+          span.about__data-hobby-item-text Фотография
+        li.about__data-hobby-item.about__data-hobby-item--blue
+          span.about__data-hobby-item-text Походы и путешествия
+        li.about__data-hobby-item.about__data-hobby-item--green
+          span.about__data-hobby-item-text Велосипед
+        li.about__data-hobby-item.about__data-hobby-item--blue
+          span.about__data-hobby-item-text Альпинизм и скалолазание
+
+block footer
+  +footer()

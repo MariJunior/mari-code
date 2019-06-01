@@ -1,0 +1,26 @@
+extends ../pug/layout.pug
+include ../pug/mixins/header.pug
+include ../pug/mixins/footer.pug
+include ../pug/data/pages-list.pug
+
+block header
+  +header(pagesList, 1)
+
+block content
+  section.start.page-wrapper
+    h1.visually-hidden Вводная страница
+
+    .hello-message
+      p.hello-message__intro Привет, меня зовут
+      p.hello-message__name Калюжная Марина
+      p.hello-message__metier Я верстальщик и frontend-разработчик
+
+    ul.tiles-menu
+      li.tiles-menu__item
+        a(href='about.html') Обо мне
+      li.tiles-menu__item
+        a(href='skills.html') Навыки
+      li.tiles-menu__item
+        a(href='portfolio.html') Портфолио
+      li.tiles-menu__item
+        a(href='contacts.html') Контакты
