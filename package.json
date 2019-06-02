@@ -39,7 +39,7 @@
     "del": "^3.0.0",
     "eslint": "^5.16.0",
     "glob-exec": "^0.1.1",
-    "gulp": "3.9.x",
+    "gulp": "^4.0.2",
     "gulp-csso": "^3.0.1",
     "gulp-html-prettify": "0.0.1",
     "gulp-imagemin": "^4.1.0",
