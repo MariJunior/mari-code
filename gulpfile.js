@@ -1,50 +1,55 @@
+/* global exports process */
+/* eslint-disable no-console */
 'use strict';
 
-var gulp = require('gulp');
-var del = require('del');
-var htmlprettify = require('gulp-html-prettify');
-var pug = require('gulp-pug');
-var plumber = require('gulp-plumber');
-var less = require('gulp-less');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var minify = require('gulp-csso');
-var rename = require('gulp-rename');
-var server = require('browser-sync').create();
-var imagemin = require('gulp-imagemin');
-var pump = require('pump');
-var uglify = require('gulp-uglify');
-var run = require('run-sequence');
-// var lec = require ('gulp-line-ending-corrector');
+const {series, parallel, src, dest, watch} = require('gulp');
+const path = require('path');
+// const gulp = require('gulp');
+const del = require('del');
+const htmlprettify = require('gulp-html-prettify');
+const pug = require('gulp-pug');
+const plumber = require('gulp-plumber');
+const less = require('gulp-less');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const minify = require('gulp-csso');
+const rename = require('gulp-rename');
+const server = require('browser-sync').create();
+const imagemin = require('gulp-imagemin');
+const pump = require('pump');
+const uglify = require('gulp-uglify');
+const ghpages = require('gh-pages');
+// const through2 = require('through2');
+// const lec = require ('gulp-line-ending-corrector');
 
 // Удаление директории 'build'
-gulp.task('clean', function() {
+function clean() {
   return del('build');
-});
+}
 
 // Копирование неизменяемых файлов шрифтов, изображений и иных из директории 'source' в директорию 'build'
-gulp.task('copy', function() {
-  return gulp.src([
+function copy() {
+  return src([
     'source/fonts/**/*.{woff,woff2,eot,ttf}',
-    'source/img/**'
+    // 'source/img/**'
   ], {
     base: 'source'
   })
-      .pipe(gulp.dest('build'));
-});
+    .pipe(dest('build'));
+}
 
 // Подключение плагина 'gulp-pug' и компиляция всех основных .pug файлов из директории 'source' в .html, их сохранение в директории 'build', последующая антиминификация и начало отслеживания изменений
-gulp.task('html', function() {
-  return gulp.src('source/pages/*.pug')
-      .pipe(plumber())
-      .pipe(pug())
-      .pipe(htmlprettify({
-        indent_char: ' ',
-        indent_size: 2
-      }))
-      .pipe(gulp.dest('build'))
-      .pipe(server.stream());
-});
+function html() {
+  return src('source/pages/*.pug')
+    .pipe(plumber())
+    .pipe(pug())
+    .pipe(htmlprettify({
+      indent_char: ' ',
+      indent_size: 2
+    }))
+    .pipe(dest('build'))
+    .pipe(server.stream());
+}
 
 // Преобразование файлов стилей:
 // 1. Получение основного файла стилей - 'style.less' из директории 'source/less'
@@ -56,28 +61,28 @@ gulp.task('html', function() {
 // 7. Переименование минифицированного файла стилей в 'style.min.css'
 // 8. Сохранение полученного файла в директорию 'build/css'
 // 9. Подключение локального сервера с помощью 'browser-sync' и начало отслеживания изменений
-gulp.task('style', function() {
-  gulp.src('source/less/style.less')
-      .pipe(plumber())
-      .pipe(less())
-      .pipe(postcss([
-        autoprefixer({
-          browsers: ['last 3 versions']
-        })
-      ]))
-      .pipe(gulp.dest('build/css'))
-      .pipe(minify())
-      .pipe(rename('style.min.css'))
-      .pipe(gulp.dest('build/css'))
-      .pipe(server.stream());
-});
+function style() {
+  return src('source/less/style.less')
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer({
+        browsers: ['last 3 versions']
+      })
+    ]))
+    .pipe(dest('build/css'))
+    .pipe(minify())
+    .pipe(rename('style.min.css'))
+    .pipe(dest('build/css'))
+    .pipe(server.stream());
+}
 
 // Оптимизация графики:
 // 1. Получение всех файлов с расширениями '.jpg', '.png' и '.svg' из директории 'source/img' на любом уровне
 // 2. Подключение 'gulp-imagemin' и его настройка: уровень сжатия png = 3 (из 10); для jpg использовать прогрессивное сжатие; для svg не удалять атрибут viewBox и запретить краткий формат записи hex-цветов
 // 3. Сохранение преобразованных изображений в директиву 'build/img'
-gulp.task('images', function() {
-  return gulp.src(['source/img/**/*.{png,jpg,svg}'/* , '!source/img/sprite.svg' */])
+function images() {
+  return src(['source/img/**/*.{png,jpg,svg}'/* , '!source/img/sprite.svg' */])
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
@@ -88,41 +93,79 @@ gulp.task('images', function() {
         ]
       })
     ]))
-    .pipe(gulp.dest('build/img'));
-});
+    .pipe(dest('build/img'));
+}
 
 // Минификация всех .js файлов из директории 'source/js' с помошью 'gulp-uglify' и сохранение в директорию 'build/js'
-gulp.task('js', function (cb) {
+function js(cb) {
   pump([
-        gulp.src('source/js/*.js'),
+        src('source/js/*.js'),
         uglify(),
-        gulp.dest('build/js')
+        dest('build/js')
     ],
     cb
   );
-});
+}
 
-// Подключение плагина 'run-sequence' для последовательного запуска задач
-gulp.task('build', function(done) {
-  run('clean', 'copy', 'html', 'style', 'js', done);
-});
+function reload(done) {
+  server.reload();
+  done();
+}
+
+function deploy(cb) {
+  ghpages.publish(path.join(process.cwd(), './build'), cb);
+}
 
 // Подключение плагина 'browser-sync' и начало отслеживания изменений файлов в директории 'build/', выполнения соотв. задач и перезагрузки страницы
-gulp.task('serve', function () {
+function serve() {
   server.init({
     // browser: 'google chrome',
     server: 'build/',
+    startPath: 'index.html',
     notify: false,
     open: false,
     cors: true,
     ui: false
   });
 
-  gulp.watch('source/pages/**/*.pug', ['html']).on('change', server.reload);
-  gulp.watch('source/less/**/*.less', ['style']).on('change', server.reload);
-  gulp.watch('source/js/*.js', ['copy']).on('change', server.reload);
-  gulp.watch('source/img/*', ['images']).on('change', server.reload);
-});
+  watch(['source/pages/**/*.pug'], { events: ['all'], delay: 100 }, series(
+    html,
+    reload
+  ));
+  watch(['source/less/**/*.less'], { events: ['all'], delay: 100 }, series(
+    style,
+    reload
+  ));
+  watch(['source/js/*.js'], { events: ['all'], delay: 100 }, series(
+    js,
+    reload
+  ));
+  watch(['source/img/*'], { events: ['all'], delay: 100 }, series(
+    images,
+    reload
+  ))
+}
+
+exports.clean = clean;
+exports.copy = copy;
+exports.html = html;
+exports.style = style;
+exports.images = images;
+exports.js = js;
+exports.deploy = deploy;
+
+exports.build = series(
+  clean,
+  parallel(copy, images),
+  parallel(html, style, js)
+);
+
+exports.default = series(
+  clean,
+  parallel(copy, images),
+  parallel(html, style, js),
+  serve
+);
 
 // Проверка и приведение концов строк всех файлов к \n (LF) для GitHub (ну и просто для единообразия)
 // gulp.task('correct-line-ending', function() {
