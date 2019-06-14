@@ -1,1 +1,100 @@
-/* stylelint-disable */
+.page-footer {
+  padding-top: 10px;
+  padding-bottom: 15px;
+
+  background-color: @translucent-bg-color-dence;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__copyright {
+    margin: 0;
+    margin-right: 5px;
+  }
+
+  &__site-map {
+    margin-right: auto;
+
+    &-icon {
+      fill: @link-color-base;
+
+      transition: all @transition-duration;
+    }
+
+    &:hover &-icon,
+    &:focus &-icon {
+      fill: @link-color-additional;
+    }
+
+    &:active &-icon {
+      fill: @link-color-base;
+      opacity: @opacity-active;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    list-style: none;
+
+    &-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 35px;
+        height: 35px;
+
+        border: 2px solid @link-color-base;
+        border-radius: 10px;
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+
+        transform-origin: center;
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    &-link {
+      position: relative;
+    }
+
+    &-icon {
+      fill: @link-color-base;
+
+      transition: all @transition-duration;
+    }
+
+    &-link:hover &-icon,
+    &-link:focus &-icon {
+      fill: @link-color-additional;
+    }
+
+    &-link:active &-icon {
+      fill: @link-color-base;
+      opacity: @opacity-active;
+    }
+  }
+
+  &__contacts {
+    width: 220px;
+    text-align: right;
+  }
+}

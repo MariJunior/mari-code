@@ -1,0 +1,121 @@
+.about {
+  padding-top: 60px;
+  padding-bottom: 70px;
+  padding-left: 100px;
+
+  &__my-photo-wrap {
+    flex-shrink: 0;
+    position: relative;
+    margin-top: 30px;
+    margin-right: 185px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 10;
+      top: -30px;
+      right: -30px;
+      display: block;
+      width: 300px;
+      height: 310px;
+
+      border: 10px solid @color-accidental-blue;
+      border-radius: 30px;
+    }
+  }
+
+  &__my-photo {
+    position: relative;
+    z-index: 10;
+    width: 300px;
+    height: 310px;
+    border-radius: 30px;
+
+    .object-fit(cover, 35% 50%);
+  }
+
+  &__data {
+    padding-top: 30px;
+    width: 465px;
+
+    &-title {
+      margin-bottom: 30px;
+    }
+
+    &-text {
+      margin-top: 0;
+      margin-bottom: 15px;
+
+      line-height: @line-height-base;
+      letter-spacing: 0.01em;
+
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-subtitle {
+      margin-bottom: 15px;
+    }
+
+    &-hobby {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      flex-wrap: wrap;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+      width: 370px;
+
+      list-style: none;
+    }
+
+    &-hobby-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 70px;
+
+      border-width: 4px;
+      border-style: solid;
+      border-radius: 20px;
+
+      &:not(:nth-child(4n)) {
+        margin-right: 30px;
+      }
+
+      &:not(:nth-last-child(-n + 4)) {
+        margin-bottom: 15px;
+      }
+
+      &:hover::before {
+        content: attr(data-title);
+        position: absolute;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 10px;
+        color: @color-main;
+        text-transform: uppercase;
+      }
+
+      &--blue {
+        border-color: @color-accidental-blue;
+      }
+
+      &--blue:hover::before {
+        background-color: rgba(@color-accidental-blue, 0.6);
+      }
+
+      &--green {
+        border-color: @color-accidental-green;
+      }
+
+      &--green:hover::before {
+        background-color: rgba(@color-accidental-green, 0.6);
+      }
+    }
+  }
+}

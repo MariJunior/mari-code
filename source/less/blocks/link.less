@@ -1,0 +1,24 @@
+.link {
+  display: inline-block;
+  vertical-align: baseline;
+  color: @link-color-base;
+
+  border-bottom: 1px solid @link-color-base;
+
+  transition: all @transition-duration;
+
+  &:hover,
+  &:focus {
+    color: @link-color-additional;
+
+    border-bottom-color: @link-color-additional;
+  }
+
+  &:active {
+    color: @link-color-base;
+
+    border-bottom-color: @link-color-base;
+
+    opacity: @opacity-active;
+  }
+}

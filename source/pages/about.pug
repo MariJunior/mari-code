@@ -6,33 +6,33 @@ block header
 block content
   section.about.page-wrapper
     .about__my-photo-wrap
-      img.about__my-photo(src='img/photo-third.jpg', with='467', height='310', alt='Моя фотография')
+      img.about__my-photo(src='img/photo-third.jpg', alt='Моя фотография')
     .about__data
       h1.about__data-title.page-title Обо мне
       p.about__data-text
-        | Привет! Я Марина Калюжная. Моя специализация — frontend–разработка. Верстаю сайты и пишу логику для них.
+        | Привет! Я Марина Калюжная. Моя специализация — frontend&#8209;разработка. Верстаю сайты и пишу логику для них.
       p.about__data-text
         | Вёрсткой начала интересоваться 2 года назад, когда проходила соответсвующий предмет в университете. С тех пор успела закончить 3 интенсива и успешно защитить выпускные проекты в „HTML Academy“. Также прошла стажировку во frontend-аутсорсе „Лига А.“.
       p.about__data-text
         | Сейчас стараюсь развиваться профессионально и социально. В свободное время посещаю митапы pitercss_meetup, Web Standart Days, несколько раз была ментором и фотографом на pitercss_class. В интернете слежу за популярными специалистами, такими как Макеевым Вадимом (pepelsbey), Юлией Бухваловой (yoksel), Николаем Громовым (nicothin). Слушаю подкасты и слежу за публикациями „Веб-стандартов“.
-      h2.about__data-subtitle Мои интересы
+      h2.about__data-subtitle.page-title.page-title--small Мои интересы
       ul.about__data-hobby
-        li.about__data-hobby-item.about__data-hobby-item--green
-          span.about__data-hobby-item-text Дизайн
-        li.about__data-hobby-item.about__data-hobby-item--blue
-          span.about__data-hobby-item-text Типографика
-        li.about__data-hobby-item.about__data-hobby-item--green
-          span.about__data-hobby-item-text Литература
-        li.about__data-hobby-item.about__data-hobby-item--blue
-          span.about__data-hobby-item-text Музыка
-        li.about__data-hobby-item.about__data-hobby-item--green
-          span.about__data-hobby-item-text Фотография
-        li.about__data-hobby-item.about__data-hobby-item--blue
-          span.about__data-hobby-item-text Походы и путешествия
-        li.about__data-hobby-item.about__data-hobby-item--green
-          span.about__data-hobby-item-text Велосипед
-        li.about__data-hobby-item.about__data-hobby-item--blue
-          span.about__data-hobby-item-text Альпинизм и скалолазание
+        li.about__data-hobby-item.about__data-hobby-item--green(data-title='Дизайн')
+          img(src='img/icons/icon-design.svg', width='48', height='48', alt='Дизайн')
+        li.about__data-hobby-item.about__data-hobby-item--blue(data-title='Типографика')
+          img(src='img/icons/icon-typography.svg', width='50', height='50', alt='Типографика')
+        li.about__data-hobby-item.about__data-hobby-item--green(data-title='Литература')
+          img(src='img/icons/icon-reading.svg', width='50', height='37', alt='Литература')
+        li.about__data-hobby-item.about__data-hobby-item--blue(data-title='Музыка')
+          img(src='img/icons/icon-music.svg', width='50', height='38', alt='Музыка')
+        li.about__data-hobby-item.about__data-hobby-item--green(data-title='Фотография')
+          img(src='img/icons/icon-camera.svg', width='50', height='40', alt='Фотография')
+        li.about__data-hobby-item.about__data-hobby-item--blue(data-title='Походы и путешествия')
+          img(src='img/icons/icon-hiking.svg', width='43', height='50', alt='Походы и путешествия')
+        li.about__data-hobby-item.about__data-hobby-item--green(data-title='Велосипед')
+          img(src='img/icons/icon-bike.svg', width='50', height='30', alt='Велосипед')
+        li.about__data-hobby-item.about__data-hobby-item--blue(data-title='Альпинизм и скалолазание')
+          img(src='img/icons/icon-alpinism.svg', width='50', height='40', alt='Альпинизм и скалолазание')
 
 block footer
   +footer()
