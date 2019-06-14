@@ -1,19 +1,9 @@
-.btn-settings() {
-  @menu-width: 50px;
-  @menu-height: 27px;
-  @line-height: 3px;
-  @line-color: #21966e;
-  @line-color-hover: #36326b;
-}
-
 .burger-btn {
-  .btn-settings();
-
   position: relative;
   display: flex;
   padding: 0;
-  width: @menu-width;
-  height: @menu-height;
+  width: 50px;
+  height: @burger-height;
   border: none;
   background: none;
 
@@ -22,26 +12,26 @@
     top: 0;
     display: block;
     width: 100%;
-    height: @line-height;
-    background-color: @line-color;
+    height: @burger-part-height;
+    background-color: @burger-part-color;
 
-    transition-duration: 0.5s;
+    transition-duration: @transition-duration;
     transition-timing-function: ease-in-out;
     transform-origin: 50% 50%;
     animation-fill-mode: both;
     animation-duration: 0.35s;
 
     &--second {
-      top: ~"calc(50% - @{line-height}/2)";
+      top: ~"calc(50% - @{burger-part-height}/2)";
     }
 
     &--third {
-      top: ~"calc(100% - @{line-height})";
+      top: ~"calc(100% - @{burger-part-height})";
     }
   }
 
   &:hover &__line {
-    background-color: @line-color-hover;
+    background-color: @burger-part-color-hover;
   }
 
   &--forward {
@@ -71,100 +61,100 @@
       }
     }
   }
+}
 
-  @keyframes forward-one {
-    0% {
-      top: 0;
-      transform: rotate(0);
-    }
-
-    33% {
-      top: ~"calc(50% - @{line-height}/2)";
-      transform: rotate(0);
-    }
-
-    100% {
-      top: ~"calc(50% - @{line-height}/2)";
-      transform: rotate(45deg);
-    }
+@keyframes forward-one {
+  0% {
+    top: 0;
+    transform: rotate(0);
   }
 
-  @keyframes forward-two {
-    0% {
-      transform: scale(1);
-    }
-
-    33% {
-      transform: scale(0);
-    }
-
-    100% {
-      transform: scale(0);
-    }
+  33% {
+    top: ~"calc(50% - @{burger-part-height}/2)";
+    transform: rotate(0);
   }
 
-  @keyframes forward-three {
-    0% {
-      top: ~"calc(100% - @{line-height})";
-      transform: rotate(0);
-    }
+  100% {
+    top: ~"calc(50% - @{burger-part-height}/2)";
+    transform: rotate(45deg);
+  }
+}
 
-    33% {
-      top: ~"calc(50% - @{line-height}/2)";
-      transform: rotate(0);
-    }
-
-    100% {
-      top: ~"calc(50% - @{line-height}/2)";
-      transform: rotate(135deg);
-    }
+@keyframes forward-two {
+  0% {
+    transform: scale(1);
   }
 
-  @keyframes backward-one {
-    0% {
-      top: ~"calc(50% - @{line-height}/2)";
-      transform: rotate(45deg);
-    }
-
-    33% {
-      top: ~"calc(50% - @{line-height}/2)";
-      transform: rotate(0);
-    }
-
-    100% {
-      top: 0;
-      transform: rotate(0);
-    }
+  33% {
+    transform: scale(0);
   }
 
-  @keyframes backward-two {
-    0% {
-      transform: scale(0);
-    }
+  100% {
+    transform: scale(0);
+  }
+}
 
-    33% {
-      transform: scale(0);
-    }
-
-    100% {
-      transform: scale(1);
-    }
+@keyframes forward-three {
+  0% {
+    top: ~"calc(100% - @{burger-part-height})";
+    transform: rotate(0);
   }
 
-  @keyframes backward-three {
-    0% {
-      top: ~"calc(50% - @{line-height}/2)";
-      transform: rotate(135deg);
-    }
+  33% {
+    top: ~"calc(50% - @{burger-part-height}/2)";
+    transform: rotate(0);
+  }
 
-    33% {
-      top: ~"calc(50% - @{line-height}/2)";
-      transform: rotate(0);
-    }
+  100% {
+    top: ~"calc(50% - @{burger-part-height}/2)";
+    transform: rotate(135deg);
+  }
+}
 
-    100% {
-      top: ~"calc(100% - @{line-height})";
-      transform: rotate(0);
-    }
+@keyframes backward-one {
+  0% {
+    top: ~"calc(50% - @{burger-part-height}/2)";
+    transform: rotate(45deg);
+  }
+
+  33% {
+    top: ~"calc(50% - @{burger-part-height}/2)";
+    transform: rotate(0);
+  }
+
+  100% {
+    top: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes backward-two {
+  0% {
+    transform: scale(0);
+  }
+
+  33% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes backward-three {
+  0% {
+    top: ~"calc(50% - @{burger-part-height}/2)";
+    transform: rotate(135deg);
+  }
+
+  33% {
+    top: ~"calc(50% - @{burger-part-height}/2)";
+    transform: rotate(0);
+  }
+
+  100% {
+    top: ~"calc(100% - @{burger-part-height})";
+    transform: rotate(0);
   }
 }

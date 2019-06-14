@@ -1,1 +1,53 @@
-/* stylelint-disable */
+// Базовые цвета https://colorscheme.ru/color-converter.html
+@black:                       hsl(0, 0%, 0%);
+@gray-darkest:                hsl(0, 0%, 10%);
+@gray-darker:                 hsl(0, 0%, 20%);
+@gray-darken:                 hsl(0, 0%, 30%);
+@gray-dark:                   hsl(0, 0%, 40%);
+@gray:                        hsl(0, 0%, 50%);
+@gray-light:                  hsl(0, 0%, 60%);
+@gray-lighten:                hsl(0, 0%, 70%);
+@gray-lighter:                hsl(0, 0%, 80%);
+@gray-lightest:               hsl(0, 0%, 90%);
+@white:                       hsl(0, 0%, 100%);
+
+@color-main:                  hsl(244, 36%, 31%);
+@color-primary:               hsl(159, 64%, 36%);
+@color-success:               hsl(120, 39%, 54%);
+@color-danger:                hsl(2, 64%, 58%);
+@color-warning:               hsl(35, 84%, 62%);
+
+@color-vk:                    #4a76a8;
+@color-fb:                    #4267b2;
+@color-tw:                    #40a2f5;
+@color-gh:                    #24292e;
+
+// Ширирны
+@body-control-with: 1200px;
+
+// Базовая типографика
+@font-size-base: 14px;
+@font-size-increased: @font-size-base * 8/7;
+@font-size-big: @font-size-base * 9/7;
+@font-family-base: "Open Sans", "Helvetica", "Arial", sans-serif;
+@font-family-contrast: "Lemontuesday", "Comic Sans", cursive;
+
+// Семантические цвета
+@body-bg-color: @gray-lighten;
+@translucent-bg-color: hsla(0, 0%, 100%, 0.3);
+
+@text-color-base: @color-main;
+@text-color-primary: @color-primary;
+
+@link-color-base: @color-main;
+@link-color-primary: @color-primary;
+
+@burger-part-color: @color-primary;
+@burger-part-color-hover: @color-main;
+
+// Разное
+@opacity-active: 0.6;
+@transition-duration: 0.5s;
+
+@burger-height: 27px;
+@burger-part-height: 3px;

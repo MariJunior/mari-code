@@ -21,10 +21,10 @@
   }
 
   &__hello-message-name {
-    font-family: Lemontuesday, "Comic Sans", cursive;
+    font-family: @font-family-contrast;
     font-size: 72px;
     line-height: 1;
-    color: #21966e;
+    color: @text-color-primary;
     text-transform: none;
   }
 
@@ -72,18 +72,18 @@
   }
 
   &__tiles-menu-link {
-    font-size: 16px;
+    font-size: @font-size-increased;
     font-style: italic;
-    color: inherit;
+    color: @link-color-base;
 
     &:hover,
     &:focus {
-      color: #21966e;
+      color: @link-color-primary;
     }
 
     &:active {
-      color: inherit;
-      opacity: 0.6;
+      color: @link-color-base;
+      opacity: @opacity-active;
     }
   }
 }

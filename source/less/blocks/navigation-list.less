@@ -14,26 +14,26 @@
   }
 
   &__link {
-    font-size: 18px;
+    font-size: @font-size-big;
     line-height: 1;
-    color: #21966e;
+    color: @link-color-primary;
 
     text-transform: uppercase;
 
     &:hover,
     &:focus {
-      color: #36326b;
+      color: @link-color-base;
     }
 
     &:active {
-      color: #21966e;
-      opacity: 0.6;
+      color: @link-color-primary;
+      opacity: @opacity-active;
     }
 
     &--current {
-      border-bottom: 2px solid #36326b;
+      border-bottom: 2px solid @link-color-base;
 
-      color: #36326b;
+      color: @link-color-base;
       cursor: default;
     }
   }

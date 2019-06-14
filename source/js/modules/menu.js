@@ -10,7 +10,7 @@ $(document).ready(function () {
 
   menuList.classList.add('visually-hidden');
 
-  menuBtn.addEventListener('click', () => {
+  menuBtn.addEventListener('click', function () {
     if (isOpen) {
       menuBtn.classList.add('burger-btn--forward');
       menuBtn.classList.remove('burger-btn--backward');
