@@ -7,17 +7,15 @@ block content
   section.start.page-wrapper
     h1.visually-hidden Вводная страница
 
-    .hello-message
-      p.hello-message__intro Привет, меня зовут
-      p.hello-message__name Калюжная Марина
-      p.hello-message__metier Я верстальщик и frontend-разработчик
+    .start__hello-message
+      p.start__hello-message-text Привет, #[br] меня зовут #[span.start__hello-message-name Калюжная&nbsp;Марина.] #[span.start__hello-message-metier Я верстальщик и frontend-разработчик.]
 
-    ul.tiles-menu
-      li.tiles-menu__item
-        a(href='about.html') Обо мне
-      li.tiles-menu__item
-        a(href='skills.html') Навыки
-      li.tiles-menu__item
-        a(href='portfolio.html') Портфолио
-      li.tiles-menu__item
-        a(href='contacts.html') Контакты
+    ul.start__tiles-menu
+      li.start__tiles-menu-item.start__tiles-menu-item--blue
+        a.start__tiles-menu-link(href='about.html') Обо мне
+      li.start__tiles-menu-item.start__tiles-menu-item--green
+        a.start__tiles-menu-link(href='skills.html') Навыки
+      li.start__tiles-menu-item.start__tiles-menu-item--green
+        a.start__tiles-menu-link(href='portfolio.html') Портфолио
+      li.start__tiles-menu-item.start__tiles-menu-item--blue
+        a.start__tiles-menu-link(href='contacts.html') Контакты

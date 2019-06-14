@@ -1,0 +1,89 @@
+.start {
+  padding-top: 20px;
+  padding-bottom: 50px;
+
+  &__hello-message {
+    margin-right: 85px;
+    padding-top: 30px;
+    padding-bottom: 320px;
+    width: 600px;
+
+    background-image: url("../img/screen.png");
+    background-size: 510px 290px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+
+  &__hello-message-text {
+    margin: 0;
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+
+  &__hello-message-name {
+    font-family: Lemontuesday, "Comic Sans", cursive;
+    font-size: 72px;
+    line-height: 1;
+    color: #21966e;
+    text-transform: none;
+  }
+
+  &__hello-message-metier {
+    font-size: 24px;
+  }
+
+  &__tiles-menu {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+    padding-top: 235px;
+    padding-left: 0;
+    width: 415px;
+
+    list-style: none;
+
+    background-image: url("../img/coder-girl-small.png");
+    background-size: 415px 245px;
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  &__tiles-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 180px;
+    height: 180px;
+
+    &:not(:nth-child(even)) {
+      margin-right: 30px;
+    }
+
+    &--blue {
+      background-image: url("../img/tiles-bg-blue.svg");
+    }
+
+    &--green {
+      background-image: url("../img/tiles-bg-green.svg");
+    }
+  }
+
+  &__tiles-menu-link {
+    font-size: 16px;
+    font-style: italic;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: #21966e;
+    }
+
+    &:active {
+      color: inherit;
+      opacity: 0.6;
+    }
+  }
+}

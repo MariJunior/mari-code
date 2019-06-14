@@ -1,27 +1,40 @@
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 
   list-style: none;
 
-  li {
-    font-family: "League Gothic", Helvetica, Arial, sans-serif;
-    font-size: 30px;
-    line-height: 1;
-
+  &__item {
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 30px;
     }
   }
 
-  a {
-    color: inherit;
-  }
+  &__link {
+    font-size: 18px;
+    line-height: 1;
+    color: #21966e;
 
-  li.current a {
-    // border-bottom: 2px solid darkblue;
-    cursor: default;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      color: #36326b;
+    }
+
+    &:active {
+      color: #21966e;
+      opacity: 0.6;
+    }
+
+    &--current {
+      border-bottom: 2px solid #36326b;
+
+      color: #36326b;
+      cursor: default;
+    }
   }
 }

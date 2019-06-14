@@ -1,17 +1,13 @@
 mixin header(data, current)
   header.page-header
     .page-header__wrapper.page-container
-      img(src='img/icon/logo-human-condensed-colored.svg', width='90', height='60', alt='Логотип Mari Kalyuzhnaya Code')
+      img.page-header__logo(src='img/icons/logo-human-condensed-colored.svg', width='90', height='60', alt='Логотип Mari Kalyuzhnaya Code')
       nav.page-header__navigation
         ul.page-header__navigation-list.navigation-list
           each item, index in data
-            li(class=(index === current-1 ? 'current' : undefined))
-              if item.href
-                a(href=(index === current-1 ? undefined : item.href))= item.title
-              else
-                a= item.title
+            li.navigation-list__item
+                a.navigation-list__link(class=(index === current-1 ? 'navigation-list__link--current' : undefined), href=(index === current-1 ? undefined : item.href))= item.title
         button.page-header__navigation-btn.burger-btn(type='button', aria-label='Кнопка открытия или закрытия меню')
-          svg(width='50', height='21', viewBox='0 0 50 21', xmlns='http://www.w3.org/2000/svg')
-            rect(fill='#21966e', width='50', height='3')
-            rect(fill='#21966e', width='50', height='3', y='18')
-            rect(fill='#21966e', width='50', height='3', y='9')
+          span.burger-btn__line
+          span.burger-btn__line.burger-btn__line--second
+          span.burger-btn__line.burger-btn__line--third

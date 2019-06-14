@@ -1,11 +1,28 @@
 .page-header {
-  padding: 10px;
+  padding: 10px 0;
 
   background-color: rgba(255, 255, 255, 0.3);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin-right: 50px;
+  }
 
   &__navigation {
     display: flex;
     align-items: center;
-    margin: 0 auto;
+  }
+
+  &__navigation-list {
+    margin-right: 50px;
+  }
+
+  .no-js &__navigation-btn {
+    display: none;
   }
 }
