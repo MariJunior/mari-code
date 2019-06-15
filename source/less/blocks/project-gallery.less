@@ -1,0 +1,36 @@
+.project-gallery {
+  display: flex;
+  align-items: flex-end;
+  width: 870px;
+
+  &__device {
+    position: relative;
+    background-color: @gray-light;
+    border: 10px solid rgb(@gray-darker);
+    border-radius: 20px;
+
+    transition: all @transition-duration;
+
+    &:hover {
+      border-color: @color-success;
+      z-index: 20;
+    }
+
+    &--desktop {
+      width: 585px;
+      height: 380px;
+    }
+
+    &--tablet {
+      margin-left: -185px;
+      width: 385px;
+      height: 310px;
+    }
+
+    &--mobile {
+      margin-left: -85px;
+      width: 160px;
+      height: 260px;
+    }
+  }
+}

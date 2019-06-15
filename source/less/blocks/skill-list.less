@@ -45,4 +45,26 @@
   &--thin {
     width: 660px;
   }
+
+  &--small {
+    justify-content: flex-end;
+    width: auto;
+  }
+
+  &--small &__item {
+    margin-bottom: 0;
+    width: 70px;
+    height: 70px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &::before {
+      width: 55px;
+      height: 55px;
+
+      border-radius: 5px;
+    }
+  }
 }

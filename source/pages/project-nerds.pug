@@ -1,0 +1,43 @@
+extends ../pug/layout.pug
+
+block header
+  +header(pagesList, 0)
+
+block content
+  section.portfolio-item
+    .portfolio-item__header
+      .portfolio-item__wrapper
+        h1.portfolio-item__title.page-title Nerds
+        time.portfolio-item__date(datetime='2018-08') август 2018
+        ul.portfolio-item__sources
+          li.portfolio-item__source
+            a.link.link--italic-underline(href='https://docs.google.com/document/d/1Z-m71nrPZCLgHVITeCWyubXl5IoBStMpzpXoja9JE7Q/edit', target='_blank') техническое задание
+          li.portfolio-item__source
+            a.link.link--italic-underline(href='https://github.com/MariJunior/Nerds', target='_blank') проект на github
+      .portfolio-item__wrapper
+        p.portfolio-item__skills-sign использованный стек
+        ul.portfolio-item__skills.skill-list.skill-list--small
+          li.skill-list__item.tool-tip.tool-tip--green-dence(data-title='HTML5')
+            img.skill-list__item-logo(src='img/icons/logo-html.svg', width='30', height='40', alt='HTML5')
+          li.skill-list__item.tool-tip.tool-tip--green-dence(data-title='CSS3')
+            img.skill-list__item-logo(src='img/icons/logo-css.svg', width='30', height='40', alt='CSS3')
+          li.skill-list__item.tool-tip.tool-tip--green-dence(data-title='JavaScript')
+            img.skill-list__item-logo(src='img/icons/logo-js.svg', width='30', height='40', alt='JavaScript')
+
+    ul.portfolio-item__breadcrumbs.breadcrumbs
+      li.breadcrumbs__item
+        a.breadcrumbs__link.link.link--italic(href='portfolio.html') Портфолио
+      li.breadcrumbs__item
+        a.breadcrumbs__link.link.link--italic(href='portfolio-layout-fixed.html') Фиксированная вёрстка
+      li.breadcrumbs__item
+        a.breadcrumbs__link.breadcrumbs__link--current.link.link--italic Nerds
+
+    p.portfolio-item__deskription
+      | Веб-студия Nёrds. Ничто не появляется на свет так часто, как «профессиональные команды разработчиков». Состязаясь в описании своих преимуществ, люди порой доходят до абсурда. Две страницы (главная и "магазин"). Фиксированная вёрстка.
+
+    .portfolio-item__gallery.project-gallery
+      .project-gallery__device.project-gallery__device--desktop(data-simplebar)
+        img(src='img/nerds-index.jpg', alt='Превью главной страницы')
+
+block footer
+  +footer()
