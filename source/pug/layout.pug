@@ -35,14 +35,15 @@ html(class='page no-js', lang='ru')
   body
     noscript У вас отключен JavaScript. Это пугает.
 
-    block header
+    .page__inner
+      block header
 
-    main.page-main
-      .page-container
-        block content
-          p Cодержимое
+      main.page__main
+        .page-container
+          block content
+            p Cодержимое
 
-    block footer
+      block footer
 
     block page-bottom
       //- script(src='js/vendors.min.js')
