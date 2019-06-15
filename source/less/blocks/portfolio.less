@@ -3,5 +3,59 @@
 
   &__title {
     margin-bottom: 30px;
+
+    text-align: center;
+  }
+
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+    padding-left: 0;
+
+    list-style: none;
+  }
+
+  &__category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 30px;
+
+    &:not(:nth-child(3n)):not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &--blue {
+      background-image: url("../img/tiles-bg-blue.svg");
+    }
+
+    &--green {
+      background-image: url("../img/tiles-bg-green.svg");
+    }
+  }
+
+  &__category-link {
+    font-size: @font-size-increased;
+    text-align: center;
+    color: @link-color-base;
+    font-style: italic;
+
+    &:hover,
+    &:focus {
+      color: @link-color-additional;
+    }
+
+    &:active {
+      color: @link-color-base;
+
+      opacity: @opacity-active;
+    }
   }
 }
