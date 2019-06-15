@@ -4,17 +4,19 @@
   padding-left: 100px;
 
   &__my-photo-wrap {
-    flex-shrink: 0;
     position: relative;
+
+    flex-shrink: 0;
     margin-top: 30px;
     margin-right: 185px;
 
     &::before {
       content: "";
       position: absolute;
-      z-index: 10;
       top: -30px;
       right: -30px;
+      z-index: 10;
+
       display: block;
       width: 300px;
       height: 310px;
@@ -27,16 +29,18 @@
   &__my-photo {
     position: relative;
     z-index: 10;
+
     width: 300px;
     height: 310px;
+
     border-radius: 30px;
 
     .object-fit(cover, 35% 50%);
   }
 
   &__data {
-    padding-top: 30px;
     width: 465px;
+    padding-top: 30px;
 
     &-title {
       margin-bottom: 30px;
@@ -60,22 +64,21 @@
 
     &-hobby {
       display: flex;
-      align-items: center;
-      align-content: center;
       flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      width: 370px;
       margin-top: 0;
       margin-bottom: 0;
       padding-left: 0;
-      width: 370px;
 
       list-style: none;
     }
 
     &-hobby-item {
-      position: relative;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       width: 70px;
       height: 70px;
 
@@ -91,30 +94,12 @@
         margin-bottom: 15px;
       }
 
-      &:hover::before {
-        content: attr(data-title);
-        position: absolute;
-        display: inline-block;
-        padding: 10px;
-        border-radius: 10px;
-        color: @color-main;
-        text-transform: uppercase;
-      }
-
       &--blue {
         border-color: @color-accidental-blue;
       }
 
-      &--blue:hover::before {
-        background-color: rgba(@color-accidental-blue, 0.6);
-      }
-
       &--green {
         border-color: @color-accidental-green;
-      }
-
-      &--green:hover::before {
-        background-color: rgba(@color-accidental-green, 0.6);
       }
     }
   }

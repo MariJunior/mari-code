@@ -1,25 +1,30 @@
 .burger-btn {
   position: relative;
+
   display: flex;
-  padding: 0;
   width: 50px;
   height: @burger-height;
-  border: none;
+  padding: 0;
+
   background: none;
+  border: none;
 
   &__line {
     position: absolute;
     top: 0;
+
     display: block;
     width: 100%;
     height: @burger-part-height;
-    background-color: @burger-part-color;
 
-    transition-duration: @transition-duration;
-    transition-timing-function: ease-in-out;
+    background-color: @burger-part-color;
     transform-origin: 50% 50%;
-    animation-fill-mode: both;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: @transition-duration;
     animation-duration: 0.35s;
+
+    animation-fill-mode: both;
 
     &--second {
       top: ~"calc(50% - @{burger-part-height}/2)";
@@ -66,16 +71,19 @@
 @keyframes forward-one {
   0% {
     top: 0;
+
     transform: rotate(0);
   }
 
   33% {
     top: ~"calc(50% - @{burger-part-height}/2)";
+
     transform: rotate(0);
   }
 
   100% {
     top: ~"calc(50% - @{burger-part-height}/2)";
+
     transform: rotate(45deg);
   }
 }
@@ -97,16 +105,19 @@
 @keyframes forward-three {
   0% {
     top: ~"calc(100% - @{burger-part-height})";
+
     transform: rotate(0);
   }
 
   33% {
     top: ~"calc(50% - @{burger-part-height}/2)";
+
     transform: rotate(0);
   }
 
   100% {
     top: ~"calc(50% - @{burger-part-height}/2)";
+
     transform: rotate(135deg);
   }
 }
@@ -114,16 +125,19 @@
 @keyframes backward-one {
   0% {
     top: ~"calc(50% - @{burger-part-height}/2)";
+
     transform: rotate(45deg);
   }
 
   33% {
     top: ~"calc(50% - @{burger-part-height}/2)";
+
     transform: rotate(0);
   }
 
   100% {
     top: 0;
+
     transform: rotate(0);
   }
 }
@@ -145,16 +159,19 @@
 @keyframes backward-three {
   0% {
     top: ~"calc(50% - @{burger-part-height}/2)";
+
     transform: rotate(135deg);
   }
 
   33% {
     top: ~"calc(50% - @{burger-part-height}/2)";
+
     transform: rotate(0);
   }
 
   100% {
     top: ~"calc(100% - @{burger-part-height})";
+
     transform: rotate(0);
   }
 }

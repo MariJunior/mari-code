@@ -1,0 +1,48 @@
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 835px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-left: 0;
+
+  list-style: none;
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 25px;
+
+    &--indent {
+      margin-right: 20px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      width: 115px;
+      height: 115px;
+
+      background-color: @color-accidental-blue;
+      border-radius: 15px;
+      transform: rotate(45deg);
+    }
+
+    &-logo {
+      z-index: 10;
+    }
+  }
+
+  &--thin {
+    width: 660px;
+  }
+}

@@ -10,34 +10,34 @@ block content
     h2.skill__title.page-title Образование
     .skill__info
       .timeline
-        .timeline__icon.timeline__icon--big
+        .timeline__icon.timeline__icon--big.timeline__icon--education
         ul.timeline__list
-          li.timeline__item.timeline__item--left
+          li.timeline__item.timeline__item.timeline__item--first
             .timeline__item-main
               h3.timeline__item-title Бакалавриат
               p.timeline__item-date-n-place сентябрь 2016 – июль 2020 | СПбГУПТД
             .timeline__icon
             p.timeline__item-details
               | Обучение в Санкт-Петербургском Государственном Университете Промышленных Технологий и Дизайна по специальности „Информационные системы и технологии в дизайне“
-          li.timeline__item.timeline__item--right
+          li.timeline__item.timeline__item--reverse.timeline__item--second
             .timeline__item-main
               h3.timeline__item-title Младший верстальщик
               p.timeline__item-date-n-place 26 февраля – 4 апреля 2018 | HTML Academy
             .timeline__icon
             p.timeline__item-details
               | Прохождение профессионального онлайн-курса „HTML и CSS, уровень 1“ и защита выпускного проекта в рамках студенческого гранта от HTML Academy.
-          li.timeline__item.timeline__item--left
+          li.timeline__item.timeline__item
             .timeline__item-main
               h3.timeline__item-title Верстальщик
               p.timeline__item-date-n-place 9 апреля – 16 мая 2018 | HTML Academy
             .timeline__icon
             p.timeline__item-details
               | Прохождение профессионального онлайн-курса „HTML и CSS, уровень 2“ и защита выпускного проекта в рамках студенческого гранта от HTML Academy.
-          li.timeline__item.timeline__item--right
+          li.timeline__item.timeline__item--reverse
             .timeline__item-main
               h3.timeline__item-title Junior Frontend-разработчик
               p.timeline__item-date-n-place 29 мая – 11 июля 2018 | HTML Academy
-            .timeline__icon
+            .timeline__icon.timeline__icon--last
             p.timeline__item-details
               | Прохождение профессионального онлайн-курса „JavaScript, уровень 1“ и защита выпускного проекта в рамках студенческого гранта от HTML Academy.
 
@@ -45,13 +45,13 @@ block content
     h2.skill__title.page-title Опыт
     .skill__info
       .timeline
-        .timeline__icon.timeline__icon--big
+        .timeline__icon.timeline__icon--big.timeline__icon--experience
         ul.timeline__list
-          li.timeline__item.timeline__item--left
+          li.timeline__item.timeline__item.timeline__item--first
             .timeline__item-main
               h3.timeline__item-title Junior Frontend-разработчик
               p.timeline__item-date-n-place сентябрь 2018 – февраль 2019 | Лига А.
-            .timeline__icon
+            .timeline__icon.timeline__icon--last
             p.timeline__item-details
               | Прохождение стажировки во frontend-аутсорсе „Лига А.“ с участием выпускников курса „Профессия Фронтенд-разработчик“ HTML Academy.
 
@@ -59,47 +59,47 @@ block content
     h2.skill__title.page-title Стек технологий
     .skill__info
       ul.skill-list
-        li.skill-list-item
-          img(src='img/logo-html.svg', width='65', height='90', alt='HTML5', title='HTML5')
-        li.skill-list-item
-          img(src='img/logo-css.svg', width='65', height='90', alt='CSS3', title='CSS3')
-        li.skill-list-item
-          img(src='img/logo-js.svg', width='65', height='90', alt='JavaScript', title='JavaScript')
-        li.skill-list-item
-          img(src='img/logo-gulp.svg', width='42', height='90', alt='Gulp', title='Gulp')
-        li.skill-list-item
-          img(src='img/logo-webpack.svg', width='70', height='78', alt='Webpack', title='Webpack')
-        li.skill-list-item
-          img(src='img/logo-sass.svg', width='90', height='68', alt='Sass', title='Sass')
-        li.skill-list-item
-          img(src='img/logo-less.svg', width='90', height='40', alt='Less', title='Less')
-        li.skill-list-item
-          img(src='img/logo-pug.svg', width='90', height='56', alt='Pug (Jade)', title='Pug (Jade)')
-        li.skill-list-item
-          img(src='img/logo-postcss.svg', width='90', height='90', alt='PostCSS', title='PostCSS')
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='HTML5')
+          img.skill-list__item-logo(src='img/icons/logo-html.svg', width='65', height='90', alt='HTML5')
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='CSS3')
+          img.skill-list__item-logo(src='img/icons/logo-css.svg', width='65', height='90', alt='CSS3')
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='JavaScript')
+          img.skill-list__item-logo(src='img/icons/logo-js.svg', width='65', height='90', alt='JavaScript')
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='Gulp')
+          img.skill-list__item-logo(src='img/icons/logo-gulp.svg', width='42', height='90', alt='Gulp')
+        li.skill-list__item.tool-tip.tool-tip--green-dence(data-title='Webpack')
+          img.skill-list__item-logo(src='img/icons/logo-webpack.svg', width='70', height='78', alt='Webpack')
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='Sass')
+          img.skill-list__item-logo(src='img/icons/logo-sass.svg', width='90', height='68', alt='Sass')
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='Less')
+          img.skill-list__item-logo(src='img/icons/logo-less.svg', width='90', height='40', alt='Less')
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='Pug (Jade)')
+          img.skill-list__item-logo(src='img/icons/logo-pug.svg', width='90', height='56', alt='Pug (Jade)')
+        li.skill-list__item.tool-tip.tool-tip--green-dence(data-title='PostCSS')
+          img.skill-list__item-logo(src='img/icons/logo-postcss.svg', width='90', height='90', alt='PostCSS')
 
-  section.skill
+  section.skill.skill--last
     h2.skill__title.page-title Инструментарий
     .skill__info
-      ul.skill-list
-        li.skill-list-item
-          img(src='img/logo-photoshop.svg', width='70', height='70', alt='Photoshop', title='Photoshop')
-        li.skill-list-item
-          img(src='img/logo-figma.svg', width='60', height='90', alt='Figma', title='Figma')
-        li.skill-list-item
-          img(src='img/logo-avocode.svg', width='67', height='90', alt='Avocode', title='Avocode')
-        li.skill-list-item
-          img(src='img/logo-zeplin.svg', width='86', height='68', alt='Zeplin', title='Zeplin')
-        li.skill-list-item
-          img(src='img/logo-atom.svg', width='70', height='70', alt='Atom editor', title='Atom editor')
-        li.skill-list-item
-          img(src='img/logo-vs-code.svg', width='70', height='70', alt='Visual Studio Code', title='Visual Studio Code')
-        li.skill-list-item
-          img(src='img/logo-sublime.svg', width='70', height='70', alt='Sublime Text', title='Sublime Text')
-        li.skill-list-item
-          img(src='img/logo-github.svg', width='89', height='78', alt='GitHub', title='GitHub')
-        li.skill-list-item
-          img(src='img/logo-bitbucket.svg', width='63', height='57', alt='BitBucket', title='BitBucket')
+      ul.skill-list.skill-list--thin
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='Photoshop')
+          img.skill-list__item-logo(src='img/icons/logo-photoshop.svg', width='70', height='70', alt='Photoshop')
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='Figma')
+          img.skill-list__item-logo(src='img/icons/logo-figma.svg', width='60', height='90', alt='Figma')
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='Avocode')
+          img.skill-list__item-logo(src='img/icons/logo-avocode.svg', width='67', height='90', alt='Avocode')
+        li.skill-list__item.tool-tip.tool-tip--green-dence(data-title='Zeplin')
+          img.skill-list__item-logo(src='img/icons/logo-zeplin.svg', width='86', height='68', alt='Zeplin')
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='Atom editor')
+          img.skill-list__item-logo(src='img/icons/logo-atom.svg', width='70', height='70', alt='Atom editor')
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='Visual Studio Code')
+          img.skill-list__item-logo(src='img/icons/logo-vs-code.svg', width='70', height='70', alt='Visual Studio Code')
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='Sublime Text')
+          img.skill-list__item-logo(src='img/icons/logo-sublime.svg', width='70', height='70', alt='Sublime Text')
+        li.skill-list__item.skill-list__item--indent.tool-tip.tool-tip--green-dence(data-title='GitHub')
+          img.skill-list__item-logo(src='img/icons/logo-github.svg', width='89', height='78', alt='GitHub')
+        li.skill-list__item.tool-tip.tool-tip--green-dence(data-title='BitBucket')
+          img.skill-list__item-logo(src='img/icons/logo-bitbucket.svg', width='63', height='57', alt='BitBucket')
 
 block footer
   +footer()

@@ -1,0 +1,31 @@
+.tool-tip {
+  position: relative;
+
+  cursor: help;
+
+  &:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    z-index: 20;
+
+    display: inline-block;
+    padding: 10px;
+
+    color: @color-main;
+    text-transform: uppercase;
+
+    border-radius: 10px;
+  }
+
+  &--blue:hover::after {
+    background-color: rgba(@color-accidental-blue, 0.6);
+  }
+
+  &--green:hover::after {
+    background-color: rgba(@color-accidental-green, 0.6);
+  }
+
+  &--green-dence:hover::after {
+    background-color: rgba(@color-accidental-green, 0.8);
+  }
+}

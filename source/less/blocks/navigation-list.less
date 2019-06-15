@@ -15,10 +15,12 @@
 
   &__link {
     font-size: @font-size-big;
+    font-weight: 600;
     line-height: 1;
     color: @link-color-additional;
-
     text-transform: uppercase;
+
+    transition: all @transition-duration;
 
     &:hover,
     &:focus {
@@ -27,13 +29,14 @@
 
     &:active {
       color: @link-color-additional;
+
       opacity: @opacity-active;
     }
 
     &--current {
-      border-bottom: 2px solid @link-color-base;
-
       color: @link-color-base;
+
+      border-bottom: 2px solid @link-color-base;
       cursor: default;
     }
   }

@@ -3,19 +3,20 @@
   padding-bottom: 50px;
 
   &__hello-message {
+    width: 600px;
     margin-right: 85px;
     padding-top: 30px;
     padding-bottom: 320px;
-    width: 600px;
 
     background-image: url("../img/screen.png");
-    background-size: 510px 290px;
     background-repeat: no-repeat;
     background-position: left bottom;
+    background-size: 510px 290px;
   }
 
   &__hello-message-text {
     margin: 0;
+
     font-size: 32px;
     text-transform: uppercase;
   }
@@ -34,29 +35,29 @@
 
   &__tiles-menu {
     display: flex;
-    align-items: center;
-    align-content: center;
     flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    width: 415px;
     margin-top: 0;
     padding-top: 235px;
     padding-left: 0;
-    width: 415px;
 
     list-style: none;
 
     background-image: url("../img/coder-girl-small.png");
-    background-size: 415px 245px;
     background-repeat: no-repeat;
     background-position: left top;
+    background-size: 415px 245px;
   }
 
   &__tiles-menu-item {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    align-items: center;
     width: 180px;
     height: 180px;
+    margin-bottom: 30px;
 
     &:not(:nth-child(even)) {
       margin-right: 30px;
@@ -73,8 +74,8 @@
 
   &__tiles-menu-link {
     font-size: @font-size-increased;
-    font-style: italic;
     color: @link-color-base;
+    font-style: italic;
 
     &:hover,
     &:focus {
@@ -83,6 +84,7 @@
 
     &:active {
       color: @link-color-base;
+
       opacity: @opacity-active;
     }
   }
