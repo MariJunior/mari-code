@@ -1,0 +1,48 @@
+.portfolio-category {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+
+  &__title {
+    margin-bottom: 30px;
+
+    text-align: center;
+  }
+
+  &__breadcrumbs {
+    order: -1;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    margin: 0;
+    padding-left: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    &:not(:nth-child(4n)):not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__image {
+    width: 270px;
+    height: 270px;
+
+    border-radius: 20px;
+
+    .object-fit(cover, top);
+  }
+}

@@ -1,0 +1,34 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  padding-left: 0;
+
+  list-style: none;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+
+    &::after {
+      content: "";
+
+      display: inline-block;
+      width: 8px;
+      height: 12px;
+      margin-left: 5px;
+
+      vertical-align: middle;
+
+      background-image: url("../img/icons/icon-next.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__link {
+    &--current {
+      cursor: default;
+
+      pointer-events: none;
+    }
+  }
+}

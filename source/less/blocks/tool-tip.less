@@ -28,4 +28,35 @@
   &--green-dence:hover::after {
     background-color: rgba(@color-accidental-green, 0.8);
   }
+
+  &--portfolio {
+    cursor: pointer;
+  }
+
+  &--portfolio:hover::after {
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 245px;
+    height: 245px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+
+    background-color: @translucent-bg-color-dence;
+    background-image: url("../img/icons/icon-plus.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 40px;
+    background-size: 100px;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+  }
 }
