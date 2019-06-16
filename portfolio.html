@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="page no-js" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="img/favicons/site.webmanifest">
+  <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#70cfea">
+  <meta name="msapplication-TileColor" content="#fbfbfb">
+  <meta name="theme-color" content="#fbfbfb">
+  <title>Mari Kalyuzhnaya Code</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    function cth(c){document.documentElement.classList.add(c)}
+    'ontouchstart' in window?cth('touch'):cth('no-touch');
+    if(typeof InstallTrigger!=='undefined')cth('firefox');
+    if(/constructor/i.test(window.HTMLElement)||(function(p){return p.toString()==="[object SafariRemoteNotification]"})(!window['safari']||(typeof safari!=='undefined'&&safari.pushNotification)))cth('safari');
+    if(/*@cc_on!@*/false||!!document.documentMode)cth('ie');
+    if(!(/*@cc_on!@*/false||!!document.documentMode)&&!!window.StyleMedia)cth('edge');
+    if(!!window.chrome&&(!!window.chrome.webstore||!!window.chrome.runtime))cth('chrome');
+    if(~navigator.appVersion.indexOf("Win"))cth('windows');
+    if(~navigator.appVersion.indexOf("Mac"))cth('osx');
+    if(~navigator.appVersion.indexOf("Linux"))cth('linux');
+  </script>
+</head>
+
+<body>
+  <noscript>У вас отключен JavaScript. Это пугает.</noscript>
+  <div class="page__inner">
+    <header class="page-header sticky">
+      <div class="page-header__wrapper page-container">
+        <img class="page-header__logo" src="img/icons/logo-human-condensed-colored.svg" width="90" height="60" alt="Логотип Mari Kalyuzhnaya Code" />
+        <nav class="page-header__navigation">
+          <ul class="page-header__navigation-list navigation-list">
+            <li class="navigation-list__item"><a class="navigation-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="navigation-list__item"><a class="navigation-list__link" href="about.html">Обо мне</a>
+            </li>
+            <li class="navigation-list__item"><a class="navigation-list__link" href="skills.html">Навыки</a>
+            </li>
+            <li class="navigation-list__item"><a class="navigation-list__link navigation-list__link--current">Портфолио</a>
+            </li>
+            <li class="navigation-list__item"><a class="navigation-list__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <button class="page-header__navigation-btn burger-btn" type="button" aria-label="Кнопка открытия или закрытия меню"><span class="burger-btn__line"></span><span class="burger-btn__line burger-btn__line--second"></span><span class="burger-btn__line burger-btn__line--third"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main class="page__main">
+      <div class="page-container">
+        <section class="portfolio">
+          <h1 class="portfolio__title page-title">Мои работы</h1>
+          <ul class="portfolio__categories">
+            <li class="portfolio__category portfolio__category--blue"><a class="portfolio__category-link" href="portfolio-layout-fixed.html">Фиксированная вёрстка</a>
+            </li>
+            <li class="portfolio__category portfolio__category--blue"><a class="portfolio__category-link" href="portfolio-layout-responsive.html">Резиновая вёрстка</a>
+            </li>
+            <li class="portfolio__category portfolio__category--blue"><a class="portfolio__category-link" href="portfolio-layout-adaptive.html">Адаптивная вёрстка</a>
+            </li>
+            <li class="portfolio__category portfolio__category--green"><a class="portfolio__category-link" href="portfolio-js-programming.html">Программирование логики (JS)</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper page-container">
+        <p class="page-footer__copyright">&copy; Марина Калюжная, 2019</p>
+        <a class="page-footer__site-map" href="site-map.html" aria-label="Карта сайта">
+          <svg class="page-footer__site-map-icon" width="52" height="47" viewBox="0 0 90.9 82" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <path d="M89.9,42h-5.2v-6c0-0.6-0.4-1-1-1H43.9V20.5h12.7c0.6,0,1-0.4,1-1V1c0-0.6-0.4-1-1-1H29.2c-0.6,0-1,0.4-1,1v18.5c0,0.6,0.4,1,1,1h12.7V35h-35c-0.6,0-1,0.4-1,1v6H1c-0.6,0-1,0.4-1,1v8c0,0.6,0.4,1,1,1h11.9c0.6,0,1-0.4,1-1v-8c0-0.6-0.4-1-1-1H7.9v-5h16v5H19c-0.6,0-1,0.4-1,1v8c0,0.6,0.4,1,1,1h11.9c0.6,0,1-0.4,1-1v-8c0-0.6-0.4-1-1-1h-4.9v-5h16v5H37c-0.6,0-1,0.4-1,1v8c0,0.6,0.4,1,1,1h11.9c0.6,0,1-0.4,1-1v-8c0-0.6-0.4-1-1-1h-4.9v-5h19v5H58c-0.6,0-1,0.4-1,1v8c0,0.6,0.4,1,1,1h4.9v5H58c-0.6,0-1,0.4-1,1v3h-6.1v-3c0-0.6-0.4-1-1-1H38c-0.6,0-1,0.4-1,1v8c0,0.6,0.4,1,1,1h11.9c0.6,0,1-0.4,1-1v-3H57v3c0,0.6,0.4,1,1,1h4.9v5H58c-0.6,0-1,0.4-1,1v8c0,0.6,0.4,1,1,1h11.9c0.6,0,1-0.4,1-1v-8c0-0.6-0.4-1-1-1h-4.9v-5h4.9c0.6,0,1-0.4,1-1v-8c0-0.6-0.4-1-1-1h-4.9v-5h4.9c0.6,0,1-0.4,1-1v-8c0-0.6-0.4-1-1-1h-4.9v-5h17.8v5H78c-0.6,0-1,0.4-1,1v8c0,0.6,0.4,1,1,1h11.9c0.6,0,1-0.4,1-1v-8C90.9,42.4,90.4,42,89.9,42z M11.9,44v6H2v-6H11.9z M29.9,44v6H20v-6H29.9z M47.9,44v6H38v-6H47.9z M30.2,18.5V2h25.4v16.5H30.2z M48.9,65H39v-6h9.9V65z M68.9,74v6H59v-6H68.9z M68.9,59v6H59v-6H68.9z M68.9,44v6H59v-6H68.9z M88.9,50H79v-6h9.9V50z"></path>
+            <path d="M34.1,7.1H37c0.6,0,1-0.4,1-1s-0.4-1-1-1h-2.9c-0.6,0-1,0.4-1,1S33.5,7.1,34.1,7.1z"></path>
+            <path d="M52.1,5.1H39.9c-0.6,0-1,0.4-1,1s0.4,1,1,1h12.2c0.6,0,1-0.4,1-1S52.7,5.1,52.1,5.1z"></path>
+            <path d="M52.1,9.2h-18c-0.6,0-1,0.4-1,1s0.4,1,1,1h18c0.6,0,1-0.4,1-1S52.7,9.2,52.1,9.2z"></path>
+            <path d="M43.9,13.4h-9.8c-0.6,0-1,0.4-1,1s0.4,1,1,1h9.8c0.6,0,1-0.4,1-1S44.5,13.4,43.9,13.4z"></path>
+            <path d="M52.1,13.4h-5.3c-0.6,0-1,0.4-1,1s0.4,1,1,1h5.3c0.6,0,1-0.4,1-1S52.7,13.4,52.1,13.4z"></path>
+          </svg>
+        </a>
+        <ul class="page-footer__socials">
+          <li class="page-footer__socials-item">
+            <a class="page-footer__socials-link" href="https://vk.com/mari_banana" target="_blank" aria-label="Страница Вконтакте">
+              <svg class="page-footer__socials-icon" width="25" height="14" viewBox="0 0 65.7 37.5" xmlns="http://www.w3.org/2000/svg" role="presentation">
+                <path d="M65.4,33.9c-0.1-0.2-0.2-0.3-0.2-0.4c-1.1-2.1-3.3-4.6-6.5-7.6l-0.1-0.1l0,0l0,0l0,0c-1.5-1.4-2.4-2.3-2.8-2.8c-0.7-0.9-0.9-1.8-0.5-2.8c0.3-0.7,1.3-2.2,3.1-4.5c0.9-1.2,1.7-2.2,2.2-2.9c3.9-5.2,5.7-8.6,5.1-10.1l-0.2-0.3C65.4,2.2,65,2,64.4,1.8s-1.3-0.2-2.2-0.1l-9.9,0.1c-0.2,0-0.5,0-0.7,0s-0.4,0.1-0.4,0.1C51.1,1.9,51.1,2,51,2l-0.1,0.1c-0.1,0.1-0.2,0.2-0.4,0.4c-0.1,0.2-0.3,0.4-0.3,0.6c-1.1,2.8-2.3,5.3-3.7,7.7c-0.8,1.4-1.6,2.6-2.3,3.7c-0.7,1-1.3,1.8-1.8,2.3s-0.9,0.9-1.3,1.2c-0.4,0.3-0.7,0.4-0.9,0.4s-0.4-0.1-0.6-0.1c-0.3-0.2-0.6-0.5-0.8-0.8c-0.2-0.4-0.3-0.8-0.4-1.3c-0.1-0.5-0.1-1-0.1-1.4s0-0.9,0-1.6s0-1.2,0-1.4c0-0.9,0-1.8,0.1-2.8c0-1,0.1-1.8,0.1-2.4s0-1.2,0-1.9s0-1.2-0.1-1.6S38.2,2.4,38,2s-0.4-0.6-0.7-0.8s-0.7-0.3-1.1-0.5C35,0.2,33.5,0,31.6,0c-4.2,0-7,0.2-8.2,0.8c-0.5,0.3-0.9,0.6-1.3,1c-0.4,0.5-0.5,0.8-0.2,0.8c1.4,0.2,2.3,0.7,2.9,1.5L25,4.5c0.2,0.3,0.3,0.8,0.5,1.6s0.3,1.6,0.3,2.5c0.1,1.7,0.1,3.1,0,4.3s-0.2,2.1-0.3,2.8c-0.1,0.7-0.3,1.2-0.5,1.6s-0.3,0.7-0.4,0.8c-0.1,0.1-0.1,0.1-0.2,0.2c-0.3,0.1-0.6,0.2-0.9,0.2s-0.7-0.2-1.2-0.5s-0.9-0.8-1.4-1.3c-0.5-0.6-1-1.3-1.7-2.3c-0.6-1-1.3-2.2-1.9-3.6l-0.5-1C16.5,9.2,16,8.2,15.4,7s-1.1-2.4-1.6-3.5C13.6,3,13.3,2.7,13,2.4l-0.2-0.1c-0.1-0.1-0.3-0.2-0.5-0.3c-0.3-0.1-0.5-0.2-0.8-0.2L2.2,1.7c-1,0-1.6,0.2-2,0.7L0.1,2.6C0,2.7,0,2.9,0,3.1C0,3.4,0.1,3.7,0.2,4c1.4,3.2,2.9,6.3,4.5,9.3s3,5.4,4.2,7.2s2.4,3.5,3.6,5.2s2,2.7,2.4,3.1c0.4,0.5,0.7,0.8,0.9,1l0.9,0.8c0.5,0.5,1.4,1.2,2.4,2c1.1,0.8,2.2,1.5,3.5,2.3c1.3,0.7,2.8,1.3,4.5,1.8s3.4,0.7,5,0.6H36c0.8-0.1,1.4-0.3,1.8-0.8l0.1-0.2c0.1-0.1,0.2-0.3,0.3-0.6s0.1-0.6,0.1-0.9c0-1,0.1-1.9,0.2-2.7c0.2-0.8,0.4-1.4,0.6-1.8c0.2-0.4,0.5-0.7,0.7-1c0.3-0.3,0.5-0.4,0.6-0.5s0.2-0.1,0.3-0.1c0.5-0.2,1.2,0,1.9,0.5s1.4,1.2,2.1,2c0.7,0.8,1.4,1.7,2.3,2.7c0.9,1,1.7,1.7,2.4,2.2l0.7,0.4c0.5,0.3,1,0.5,1.8,0.8c0.7,0.2,1.4,0.3,1.9,0.2l8.8-0.1c0.9,0,1.5-0.1,2-0.4c0.5-0.3,0.8-0.6,0.9-0.9s0.1-0.7,0-1.2C65.5,34.3,65.4,34,65.4,33.9z"></path>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__socials-item">
+            <a class="page-footer__socials-link" href="https://t.me/Meri_Kaluzhnaya" target="_blank" aria-label="Профиль Telegram">
+              <svg class="page-footer__socials-icon" width="25" height="22" viewBox="0 0 63.9 54.8" xmlns="http://www.w3.org/2000/svg" role="presentation">
+                <path d="M61.9,0.1l-61,23.2c-1.2,0.5-1.2,2.4,0,2.9l15.6,6.4L22.3,51c0.3,1,1.6,1.3,2.4,0.6l8.9-8.3l17,11.3c0.9,0.6,2,0.1,2.2-1l11-51.9C64.1,0.6,63-0.3,61.9,0.1z M25.2,36.1l-1,9.4L19.5,31L52.7,9.2L25.2,36.1z"></path>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__socials-item">
+            <a class="page-footer__socials-link" href="https://www.instagram.com/mk__code/" target="_blank" aria-label="Профиль Instagram">
+              <svg class="page-footer__socials-icon" width="25" height="25" viewBox="0 0 61.1 61.4" xmlns="http://www.w3.org/2000/svg" role="presentation">
+                <path d="M30.6,14.8c-8.8,0-16,7.1-16,15.8s7.2,15.8,16,15.8s16-7.1,16-15.8S39.4,14.8,30.6,14.8z M30.6,40.6c-5.6,0-10.1-4.5-10.1-10s4.6-10,10.1-10c5.6,0,10.1,4.5,10.1,10S36.2,40.6,30.6,40.6z"></path>
+                <path d="M43.5,0H17.6C7.9,0,0,7.9,0,17.6v26.2c0,9.7,7.9,17.6,17.6,17.6h25.9c9.7,0,17.6-7.9,17.6-17.6V17.6C61.1,7.9,53.2,0,43.5,0z M55.3,43.8c0,6.5-5.3,11.8-11.8,11.8H17.6c-6.5,0-11.8-5.3-11.8-11.8V17.6c0-6.5,5.3-11.8,11.8-11.8l0,0h25.9c6.5,0,11.8,5.3,11.8,11.8V43.8z"></path>
+                <path d="M43.1,14.1a3.8,3.8 0 1,0 7.6,0a3.8,3.8 0 1,0 -7.6,0"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__contacts"><a class="page-footer__contacts-link link" href="tel:+79516638146">+7 (951) 663-81-46</a><a class="page-footer__contacts-link link" href="mailto:marinakaluzhnaya13@gmail.com">marinakaluzhnaya13@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

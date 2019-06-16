@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="page no-js" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="img/favicons/site.webmanifest">
+  <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#70cfea">
+  <meta name="msapplication-TileColor" content="#fbfbfb">
+  <meta name="theme-color" content="#fbfbfb">
+  <title>Mari Kalyuzhnaya Code</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    function cth(c){document.documentElement.classList.add(c)}
+    'ontouchstart' in window?cth('touch'):cth('no-touch');
+    if(typeof InstallTrigger!=='undefined')cth('firefox');
+    if(/constructor/i.test(window.HTMLElement)||(function(p){return p.toString()==="[object SafariRemoteNotification]"})(!window['safari']||(typeof safari!=='undefined'&&safari.pushNotification)))cth('safari');
+    if(/*@cc_on!@*/false||!!document.documentMode)cth('ie');
+    if(!(/*@cc_on!@*/false||!!document.documentMode)&&!!window.StyleMedia)cth('edge');
+    if(!!window.chrome&&(!!window.chrome.webstore||!!window.chrome.runtime))cth('chrome');
+    if(~navigator.appVersion.indexOf("Win"))cth('windows');
+    if(~navigator.appVersion.indexOf("Mac"))cth('osx');
+    if(~navigator.appVersion.indexOf("Linux"))cth('linux');
+  </script>
+</head>
+
+<body>
+  <noscript>У вас отключен JavaScript. Это пугает.</noscript>
+  <div class="page__inner">
+    <header class="page-header sticky">
+      <div class="page-header__wrapper page-container">
+        <img class="page-header__logo" src="img/icons/logo-human-condensed-colored.svg" width="90" height="60" alt="Логотип Mari Kalyuzhnaya Code" />
+        <nav class="page-header__navigation">
+          <ul class="page-header__navigation-list navigation-list">
+            <li class="navigation-list__item"><a class="navigation-list__link navigation-list__link--current">Главная</a>
+            </li>
+            <li class="navigation-list__item"><a class="navigation-list__link" href="about.html">Обо мне</a>
+            </li>
+            <li class="navigation-list__item"><a class="navigation-list__link" href="skills.html">Навыки</a>
+            </li>
+            <li class="navigation-list__item"><a class="navigation-list__link" href="portfolio.html">Портфолио</a>
+            </li>
+            <li class="navigation-list__item"><a class="navigation-list__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <button class="page-header__navigation-btn burger-btn" type="button" aria-label="Кнопка открытия или закрытия меню"><span class="burger-btn__line"></span><span class="burger-btn__line burger-btn__line--second"></span><span class="burger-btn__line burger-btn__line--third"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main class="page__main">
+      <div class="page-container">
+        <section class="start page-wrapper">
+          <h1 class="visually-hidden">Вводная страница</h1>
+          <div class="start__hello-message">
+            <p class="start__hello-message-text">Привет,
+              <br>меня зовут <span class="start__hello-message-name">Калюжная&nbsp;Марина.</span>  <span class="start__hello-message-metier">Я верстальщик и frontend-разработчик.</span>
+            </p>
+          </div>
+          <ul class="start__tiles-menu">
+            <li class="start__tiles-menu-item start__tiles-menu-item--blue"><a class="start__tiles-menu-link" href="about.html">Обо мне</a>
+            </li>
+            <li class="start__tiles-menu-item start__tiles-menu-item--green"><a class="start__tiles-menu-link" href="skills.html">Навыки</a>
+            </li>
+            <li class="start__tiles-menu-item start__tiles-menu-item--green"><a class="start__tiles-menu-link" href="portfolio.html">Портфолио</a>
+            </li>
+            <li class="start__tiles-menu-item start__tiles-menu-item--blue"><a class="start__tiles-menu-link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>
