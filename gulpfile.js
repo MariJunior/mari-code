@@ -28,6 +28,9 @@ function clean() {
 function copy() {
   return src([
     'source/fonts/**/*.{woff,woff2,eot,ttf}',
+    'source/img/favicons/*.ico',
+    'source/img/favicons/site.webmanifest',
+    'source/*.php'
   ], {
     base: 'source'
   })

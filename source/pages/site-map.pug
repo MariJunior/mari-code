@@ -1,0 +1,48 @@
+extends ../pug/layout.pug
+
+block header
+  +header(pagesList, 0)
+
+block content
+  section.site-map
+    h1.site-map__title.page-title Карта сайта
+
+    ul
+      li
+        a(href='index.html') Главная
+      li
+        a(href='about.html') Обо мне
+      li
+        a(href='skills.html') Навыки
+      li
+        a(href='portfolio.html') Портфолио
+        ul
+          li
+            a(href='portfolio-layuot-fixed.html') Фиксированная вёрстка
+            ul
+              li
+                a(href='project-nerds.html') Nerds
+          li
+            a(href='portfolio-layuot-responsive.html') Резиновая вёрстка
+            ul
+              li
+                a(href='project-sedona.html') Sedona
+          li
+            a(href='portfolio-layuot-adaptive.html') Адаптивная вёрстка
+            ul
+              li
+                a(href='project-pink.html') Pink App
+          li
+            a(href='portfolio-js-pogramming.html') Программирование логики (JS)
+            ul
+              li
+                a(href='project-kekstagram.html') Kekstagram
+              li
+                a(href='project-code-n-magik.html') Code and Magick
+      li
+        a(href='contacts.html') Контакты
+
+
+
+block footer
+  +footer()
