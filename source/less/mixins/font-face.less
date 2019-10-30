@@ -7,8 +7,8 @@
       local("@{filename}"),
       local("@{family}"),
       url("../fonts/@{filename}.eot?#iefix") format("embedded-opentype"),
-      url("../fonts/@{filename}.woff") format("woff"),
       url("../fonts/@{filename}.woff2") format("woff2"),
+      url("../fonts/@{filename}.woff") format("woff"),
       url("../fonts/@{filename}.ttf") format("truetype");
     font-weight: @weight;
     font-style: @style;
@@ -23,8 +23,8 @@
     src:
       local("@{filename}"),
       local("@{family}"),
-      url("../fonts/@{filename}.woff") format("woff"),
-      url("../fonts/@{filename}.woff2") format("woff2");
+      url("../fonts/@{filename}.woff2") format("woff2"),
+      url("../fonts/@{filename}.woff") format("woff");
     font-weight: @weight;
     font-style: @style;
 
